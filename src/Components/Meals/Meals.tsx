@@ -47,21 +47,6 @@ function Meals( {recipes,favorite,setFavorite}:RecipesType1):any
     
   // };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     console.log("meals page recipe",recipes);
     //console.log("meals page",recipe.recipes.strCatogery);
     return(
