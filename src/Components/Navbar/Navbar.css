@@ -1,0 +1,68 @@
+.Navbar
+{
+    display: flex;
+   
+     margin: 10px 10px 0px 5px; 
+     justify-content: space-between; 
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 48px;
+}
+
+
+
+.Navbar img
+{
+    width: 36px;
+    height: 48px;
+}
+.Navbar p
+{
+    font-size: 30px;
+
+}
+.Link
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+span {
+    margin-left: 35px;
+    font-size: 16px;
+    color: black;
+    
+  }
+  .Logo {
+    font-size: 28px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* .Badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  } */
+  
+  
+  /* .BadgeWarning[href] {
+    background-color: #c67605;
+  } */
+   #FavoriteCount {
+    font-size: 13px;
+    background: #827d89;
+    color: #fff;
+    padding: 2px 2px;
+     vertical-align: top; 
+     margin-left: 2px; 
+  } 
+
+
+
