@@ -1,20 +1,22 @@
 import React  from "react";
 import TextField from   "@mui/material/TextField";
 import "./SearchBar.css"; 
-type SearchType={searchName: string;setSearchName:Function};
+type SearchType={setSearchRecipes:React.Dispatch<React.SetStateAction<string>>};
   export function SearchBar(propsearch:SearchType)
 {
   function onChangeEvent(event:any):string
   {
     
-propsearch.setSearchName(event.target.value);
+propsearch.setSearchRecipes(event.target.value);
 return event.currentTarget.value;
   }
-    return( <form id="recipes">
-    <div className="searchPart"> 
-    <TextField type="text" id="txtName" name="txtName" label="Please enter the Name" variant="standard" onChange={onChangeEvent} />
-    <p>suggestion: pizza, pork, lamb, ...</p>
+
+    return(<div className="searchPart"> <form id="recipes">
+    <div > 
+    <TextField type="text" id="txtName" helperText="suggestion: pizza, pork, lamb, ..." name="txtName" label="Please enter the Name" variant="standard"  onChange={onChangeEvent} />
+  
     </div>
-    </form>);
+    </form>
+    </div>);
 }
 export default SearchBar;

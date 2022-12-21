@@ -11,15 +11,20 @@ function Homes()
    return <div> 
     
 <div className="Background">
-   <h1>HEALTHY DELICIOUS RECIPES</h1>
+   
+  
 <img className="MainBackground" src= {Food} alt ="background"></img>
+<div className="BackgroundTitle">
+
+   <p>HEALTHY DELICIOUS RECIPES</p>
+   </div>
 </div>
 
 <div className="DownPart">
   <div className="SubTitles"> 
-<h3>Popular food</h3>
+<h4>Popular food</h4>
 <p>We provides variety foods and beverages</p>
-<div className="Recipes">
+<div className="RecipesPic ">
    <img className="Recipes"  src={salad} alt="salad"></img>
    <img className="Recipes" src={Shrimp} alt="shrimp"></img>
    <img className="Recipes" src={Cake} alt="cake"></img>

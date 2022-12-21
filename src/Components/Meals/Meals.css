@@ -1,43 +1,9 @@
-*
-{
-    font-family: Rajdhani ,sans-serif;
-    box-sizing: border-box;
-   
-    /* margin: 30px 0px; */
-}
- .Meals
+
+  .Meals
 {
     display: grid;
     grid-template-columns: auto auto auto;
-    width: 80%;
-    height: 30%;
-} 
-.recipeImage
-{
-    width: 60px;
-    height: 70px;
+
+
 }
-.Sympol
-{
-    color: red;
-  background-color: rgb(93, 42, 165);
-  width: 15px;
-  padding: 5px;
-   
-}
-.Name
-{
-    color: red;
-    margin-left: 30px;
-    line-height: 2px;
-   
-}
-.Ingredient
-{
-    color: rgb(81, 81, 86);
-    line-height: 3px;
-}
-Button
-{
-    color: brown;
-}
+
