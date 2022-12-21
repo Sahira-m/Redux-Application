@@ -9,10 +9,10 @@ import MealsItem from "./MealsItems";
   setFavorite:React.Dispatch<React.SetStateAction<RecipesType[]>>;};
 function Meals( {recipes,favorite,setFavorite}:RecipesType1):any
 {
-  if(recipes.length===0)
-  {
+   if(!recipes)
+   {
     return(<div>Sorry we have  Not got this recipes yet </div>);
-  }
+   }
 // return(<div className="Meals">
 
 // {
@@ -27,8 +27,8 @@ function Meals( {recipes,favorite,setFavorite}:RecipesType1):any
  
   
   return (
-    <div>
-      RecipeComponent
+    <div >
+       <h5>Our Recipes are</h5>
       <div className="Meals">
         {
         recipes? recipes.map((items,index) => {

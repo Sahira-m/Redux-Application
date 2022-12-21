@@ -10,13 +10,9 @@
 } */
 .searchPart 
 {
-     align-content: center;
-     margin: auto;
+     /*align-content: center;*/
+     margin-left: 500px;
     /* margin-left: 550px; */
-     width: 100px; 
+     /*width: 100px; */
     /*padding: 10px; */
-}
-p
-{
-margin-left: 5px;
 }

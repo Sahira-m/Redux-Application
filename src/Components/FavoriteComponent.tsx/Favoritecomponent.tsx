@@ -11,14 +11,14 @@ import Avatar from '@mui/material/Avatar';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-//import FavoriteIcon from '@mui/icons-material/Favorite';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import "./FavoriteComponent.css";
 type FavTypes={
     favorite:RecipesType[]; 
-    setFavorite:Function;
+    // setFavorite:React.Dispatch<React.SetStateAction<RecipesType[]>>;
    
   };
   type ExpandMoreProps= IconButtonProps &{ expand :boolean;}
@@ -32,22 +32,23 @@ type FavTypes={
       duration: theme.transitions.duration.shortest,
     }),
   }));
-  export function FavoriteComponent({favorite, 
-    setFavorite}:FavTypes)
+  export function FavoriteComponent({favorite}:FavTypes)
+    //setFavorite}:FavTypes)
 {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
       };
-    return  <div className="Favorite">
+    return  <div className="favorite">
     <h2>This is Favoirate page</h2> 
-  <div className="favorite"> 
+  <div > 
   {
-    favorite.map((recipes)=>
+    favorite.map((recipes,index)=>
 
     <Card sx={{ maxWidth: 350 }}>
         <CardHeader
+        key={index}
           avatar={
             <Avatar sx={{ bgcolor:red[500] }} aria-label="recipe">
              {recipes.strMeal.charAt(0)}

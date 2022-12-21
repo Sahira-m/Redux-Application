@@ -20,7 +20,7 @@ import ListItem from '@mui/material/ListItem';
 type RecipesType1={
     recipes:RecipesType;
     favorite:RecipesType[]; 
-    setFavorite:Function;
+    setFavorite:React.Dispatch<React.SetStateAction<RecipesType[]>>;
    };
    // new codes from mui
    type ExpandMoreProps= IconButtonProps &{ expand :boolean;}
@@ -36,10 +36,21 @@ type RecipesType1={
   }));
   export function MealsItem({recipes,favorite,setFavorite}:RecipesType1 )
 {
+ 
     function   addFavorite():void
     {
-     const result=[...favorite, recipes]
-       setFavorite(result );
+      
+      let existVal;
+     
+       existVal= favorite?favorite.filter((item)=>item.idMeal===recipes.idMeal.toString()):""
+console.log( "value is",existVal,typeof(existVal));
+       if(existVal )
+       {
+       const  result=[...favorite, recipes]
+
+        setFavorite(result );
+       }
+  
    
      console.log("fav new list is",favorite);
      
@@ -83,8 +94,8 @@ type RecipesType1={
           </List>
         </CardContent>
          <CardActions disableSpacing> 
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon onClick={addFavorite} />
+          <IconButton aria-label="add to favorites" onClick={addFavorite}>
+            <FavoriteIcon  />
           </IconButton>
           
            <ExpandMore

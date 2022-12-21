@@ -13,7 +13,7 @@ import {SearchBar} from "../Components/SearchBar/SearchBar";
 function Recipe({items,setSearchRecipes,favorite, setFavorite}:RecipesTypes)
 {
   return(
-      <div  className="Meals">
+      <div  >
     
          <SearchBar  setSearchRecipes={setSearchRecipes} ></SearchBar>
          <Meals recipes={items } favorite={favorite} setFavorite={setFavorite}></Meals>

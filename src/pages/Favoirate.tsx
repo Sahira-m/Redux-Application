@@ -9,8 +9,9 @@ import FavoriteComponent from "../Components/FavoriteComponent.tsx/Favoritecompo
 function Favoirate({favorite, 
   setFavorite}:FavTypes)
 {
- return <div className="Favorite">
-<FavoriteComponent favorite={favorite} setFavorite={setFavorite}></FavoriteComponent>
+ return <div>
+  <FavoriteComponent favorite={favorite} ></FavoriteComponent>
+{/* <FavoriteComponent favorite={favorite} setFavorite={setFavorite}></FavoriteComponent> */}
   </div>;
 }
 export default Favoirate;
